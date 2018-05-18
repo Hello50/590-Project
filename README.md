@@ -5,11 +5,16 @@ User Enumeration
 
 Finding the username via the Enumerate Username feauture on the wpscan use the command: "wpscan --url http://wpdistillery.vm enumerate -u". The –url argument is used to specify the target website. The –enumerate argument is used to trigger the WPScan enumeration module and the -u is to enumerate WordPress users. 
 
+
+Bruteforce
 ![credential theft pt 1](https://user-images.githubusercontent.com/37880152/40150494-c2b45ab2-592e-11e8-8982-e23dcffa8846.gif)
 
 ![credential theft pt 2](https://user-images.githubusercontent.com/37880152/40150495-c462f044-592e-11e8-86a0-e6b36552bac5.gif)
 
 The two gifs above show how you can use the same Wpscan tool to steal login credentials using the found username found using the enumerate username feauture and then running a bruteforce attack using a common password text file found online.The command used is: "wpscan --url http://wpdistillery.vm --wordlist 'root/Documents/john.txt' " This version of wordpress does not have bruteforce counter measures such as device cookies to slow down the process or lockout after certain passwords attempted therefore, it is susceptible to bruteforcing. The other countermeasure would be for a user to use a strong password that is not common.
+
+
+Privilege Escalation
 
 ![privilege escalation pt 1](https://user-images.githubusercontent.com/37880152/40150498-ca343cf8-592e-11e8-84cd-499ff4d8d5b5.gif)
 
@@ -29,6 +34,9 @@ $status = ‘0’;
 }
 
 clean_comment_cache( array_keys($statuses) );
+
+
+
 
 
 
