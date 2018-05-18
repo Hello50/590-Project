@@ -1,6 +1,7 @@
 # 590-Project
 
 User Enumeration
+
 ![userenumeration](https://user-images.githubusercontent.com/37880152/40150460-92f577de-592e-11e8-8e8b-2fa520d3f1a7.gif)
 
 Finding the username via the Enumerate Username feauture on the wpscan use the command: "wpscan --url http://wpdistillery.vm enumerate -u". The –url argument is used to specify the target website. The –enumerate argument is used to trigger the WPScan enumeration module and the -u is to enumerate WordPress users. 
